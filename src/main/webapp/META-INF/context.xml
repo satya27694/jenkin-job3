@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context path="/smpl1" docBase="./smpl1" debug="1" reloadable="false">
+
+    <Environment name="logActiveFileOutput" value="true" type="java.lang.String" override="false" />
+    <Environment name="logName" value="E:\\devops\\maven\\practise-3\\smpl1\\target\\smpl1.log" type="java.lang.String" override="false" />
+    <Environment name="logFileRotatePattern" value="E:\\devops\\maven\\practise-3\\smpl1\\target\\smpl1_logs\\smpl1-%i.log.gz" type="java.lang.String" override="false" />
+    <Environment name="logLevel" value="INFO" type="java.lang.String" override="false" />
+    <Environment name="logFileSize" value="10485760" type="java.lang.String" override="false" />
+    <Environment name="logFilesCount" value="10" type="java.lang.String" override="false" />
+
+    <Environment name="configVersion" value="production" type="java.lang.String" override="false" />
+
+    <Environment name="applicationBaseURL" value="https://localhost:8080/smpl1/" type="java.lang.String" override="false" />
+    <Environment name="resourceRootURL" value="/smpl1/resources/" type="java.lang.String" override="false" />
+    <Environment name="protectedResourceRootURL" value="/smpl1/protected/" type="java.lang.String" override="false" />
+
+    <Environment name="resourceDiskRootFolder" value="E:\\devops\\maven\\practise-3\\smpl1\\src\\main\\webapp\\resources" type="java.lang.String" override="false" />
+    <Environment name="protectedResourceDiskRootFolder" value="E:\\devops\\maven\\practise-3\\smpl1\\src\\main\\webapp\\protected" type="java.lang.String" override="false" />
+
+    <Environment name="indexDiskRootFolder" value="E:\\devops\\maven\\practise-3\\smpl1\\target\\temp\\indexdir" type="java.lang.String" override="false" />
+    
+    <Environment name="portDataSourceClassName" value="org.apache.derby.jdbc.EmbeddedDriver" type="java.lang.String" override="false" />
+    <Environment name="servDataSourceClassName" value="org.apache.derby.jdbc.EmbeddedDriver" type="java.lang.String" override="false" />
+	
+    <Resource name="jdbc/portDataSource" auth="Container"
+              type="javax.sql.DataSource" driverClassName="org.apache.derby.jdbc.EmbeddedDriver"
+              maxActive="8" maxIdle="4"
+              username="agile" password="agile"
+              url="jdbc:derby:E:\\devops\\maven\\practise-3\\smpl1\\target/derby/production/smpl1Port;create=true" />
+
+    <Resource name="jdbc/servDataSource" auth="Container"
+              type="javax.sql.DataSource" driverClassName="org.apache.derby.jdbc.EmbeddedDriver"
+              maxActive="8" maxIdle="4"
+              username="agile" password="agile"
+              url="jdbc:derby:E:\\devops\\maven\\practise-3\\smpl1\\target/derby/production/smpl1Serv;create=true" />
+
+</Context>
